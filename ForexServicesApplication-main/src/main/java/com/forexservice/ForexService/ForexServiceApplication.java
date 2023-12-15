@@ -2,9 +2,10 @@ package com.forexservice.ForexService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@ComponentScan(basePackages = "com.forexservice.ForexService.Controller.AdminAuthenticationController")
+//@ComponentScan(basePackages = "com.forexservice.ForexService.Config")
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class ForexServiceApplication {
 

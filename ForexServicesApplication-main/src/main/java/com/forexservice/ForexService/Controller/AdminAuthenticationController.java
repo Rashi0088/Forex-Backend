@@ -16,7 +16,7 @@ import com.forexservice.ForexService.Dto.AdminLoginDto;
 import com.forexservice.ForexService.Entity.Admin;
 import com.forexservice.ForexService.Service.AdminAuthenticationService;
 
-@CrossOrigin(origins="http://localhost:3000/")
+//@CrossOrigin(origins="http://localhost:3000/")
 @RestController
 @RequestMapping("/authen")
 public class AdminAuthenticationController {

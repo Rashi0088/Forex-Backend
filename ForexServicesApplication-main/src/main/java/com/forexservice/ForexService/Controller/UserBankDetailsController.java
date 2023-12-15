@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.forexservice.ForexService.Dto.UserBankDetailsDto;
 import com.forexservice.ForexService.Service.UserBankDetailsService;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 
 public class UserBankDetailsController {

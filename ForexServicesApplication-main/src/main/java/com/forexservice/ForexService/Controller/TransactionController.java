@@ -16,7 +16,7 @@ import com.forexservice.ForexService.Dto.TransactionDto;
 import com.forexservice.ForexService.Entity.Transaction;
 import com.forexservice.ForexService.Service.TransactionService;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 public class TransactionController {
 	@Autowired

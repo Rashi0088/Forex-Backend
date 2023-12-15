@@ -35,7 +35,7 @@ import com.itextpdf.text.DocumentException;
  
 import com.itextpdf.text.pdf.PdfWriter;
  
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 public class ReportController {
 	@Autowired

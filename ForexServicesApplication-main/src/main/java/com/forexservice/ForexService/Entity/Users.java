@@ -22,60 +22,18 @@ public class Users {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int usersId;
 	
-	@Column(name = "name")
-	private String name;
-	
-
-	
-	@Column(name = "location")
-	private String location;
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	@Column(name = "gender")
-	private String gender;
-	
-	@Column(name = "email")
-	private String email;
-	
-	@Column(name = "password")
-	private String password;
-	
-	private String mobileNo;
-	@OneToMany(mappedBy="user",cascade = CascadeType.ALL )
-    @JsonIgnore
-	private List<UserBankDetails> userbankdetails;
-
-//	@OneToMany(mappedBy="user")
-//    @JsonIgnore
-//	private List<Transaction> transaction;
-
-	public List<UserBankDetails> getUserbankdetails() {
-		return userbankdetails;
-	}
-	public void setUserbankdetails(List<UserBankDetails> userbankdetails) {
-		this.userbankdetails = userbankdetails;
-	}
-	
-	
-
-
-
-
-
 	public int getUsersId() {
 		return usersId;
 	}
 	public void setUsersId(int usersId) {
 		this.usersId = usersId;
 	}
-	
-	
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getLocation() {
 		return location;
 	}
@@ -106,7 +64,35 @@ public class Users {
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
+	public List<UserBankDetails> getUserbankdetails() {
+		return userbankdetails;
+	}
+	public void setUserbankdetails(List<UserBankDetails> userbankdetails) {
+		this.userbankdetails = userbankdetails;
+	}
+	@Column(name = "name")
+	private String name;
+		
+	@Column(name = "location")
+	private String location;
 	
+	@Column(name = "gender")
+	private String gender;
 	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "password")
+	private String password;
+	
+	private String mobileNo;
+	@OneToMany(mappedBy="user",cascade = CascadeType.ALL )
+    @JsonIgnore
+	private List<UserBankDetails> userbankdetails;
 
+//	@OneToMany(mappedBy="user")
+//    @JsonIgnore
+//	private List<Transaction> transaction;
+
+	
 }

@@ -16,7 +16,7 @@ import com.forexservice.ForexService.Dto.LoginDto;
 import com.forexservice.ForexService.Entity.Users;
 import com.forexservice.ForexService.Service.UsersAuthenticationService;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("/auth")
 public class UsersAuthenticationController {
@@ -25,6 +25,7 @@ public class UsersAuthenticationController {
 
 	@PostMapping("/login")
 	public ResponseEntity<Users> doLogin(@RequestBody LoginDto loginReq) {
+		System.out.println(loginReq);
 		Users users = usersAuthenticationService.login(loginReq.getEmail(), loginReq.getPassword());
 		ResponseEntity<Users> responseEntity = new ResponseEntity<>(users, HttpStatus.OK);
 		return responseEntity;

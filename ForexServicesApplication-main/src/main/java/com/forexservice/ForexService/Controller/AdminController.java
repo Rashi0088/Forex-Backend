@@ -18,7 +18,7 @@ import com.forexservice.ForexService.Exception.InvalidInputException;
 import com.forexservice.ForexService.Repository.AdminRepository;
 import com.forexservice.ForexService.Service.AdminService;
 
-@CrossOrigin(origins="http://localhost:3000")
+//@CrossOrigin(origins="http://localhost:3000")
 @RestController
 public class AdminController {
 	

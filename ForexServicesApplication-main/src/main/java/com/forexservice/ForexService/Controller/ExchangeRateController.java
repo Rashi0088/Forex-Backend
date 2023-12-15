@@ -21,7 +21,7 @@ import com.forexservice.ForexService.Dto.ExchangeRateDto;
 import com.forexservice.ForexService.Entity.ExchangeRate;
 import com.forexservice.ForexService.Service.ExchangeRateService;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 public class ExchangeRateController {
 	@Autowired

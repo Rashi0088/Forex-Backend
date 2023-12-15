@@ -21,7 +21,7 @@ import com.forexservice.ForexService.Entity.Users;
 import com.forexservice.ForexService.Exception.InvalidInputException;
 import com.forexservice.ForexService.Service.UsersService;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 public class UsersController {
 	
@@ -46,6 +46,7 @@ public class UsersController {
 		ResponseEntity<UsersDto> responseEntity = new ResponseEntity<>(newUsers, HttpStatus.CREATED);
 		return responseEntity;
 		}
+	
 	@DeleteMapping("/users/delete/{id}")
 	public ResponseEntity<String> removeUsers(@PathVariable("id") int usersId) {
 		usersService.deleteUsers(usersId);
