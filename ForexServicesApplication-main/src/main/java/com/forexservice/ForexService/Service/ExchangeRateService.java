@@ -27,6 +27,9 @@ public interface ExchangeRateService {
 //To get all Rates	
 	public List<ExchangeRate> findAllRates();
 	
+	
+	 public Double getExchangeRateByCurrency(String fromCurrency, String toCurrency);
+	
 }
 	
 	

@@ -124,5 +124,12 @@ public class ExchangeRateServiceImplementation implements ExchangeRateService {
 		
 	}
 
+	@Override
+	public Double getExchangeRateByCurrency(String fromCurrency, String toCurrency) {
+		// TODO Auto-generated method stub
+		  return exchangeRateRepository.findExchangeRateByCurrency(fromCurrency, toCurrency);
+		
+	}
+
 	
 }

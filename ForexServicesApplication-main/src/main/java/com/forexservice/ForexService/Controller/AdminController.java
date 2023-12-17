@@ -47,7 +47,6 @@ public class AdminController {
 		ExchangeRate updatedexchangeRate = adminService.updateExchangeRate(exchangeRate);
 		ResponseEntity<ExchangeRate> responseEntity = new ResponseEntity<>(updatedexchangeRate, HttpStatus.OK);
 		return responseEntity;
-
 	}
   
 	@PutMapping("admin/resetpassword")

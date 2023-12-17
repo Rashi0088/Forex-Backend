@@ -54,8 +54,6 @@ public class UsersController {
 		return responseEntity;
 	}
 	
-
-	
 	@GetMapping("/users/all")
 	public List<Users> fetchAllUsers() {
 		List<Users> list = usersService.getAllUsers();

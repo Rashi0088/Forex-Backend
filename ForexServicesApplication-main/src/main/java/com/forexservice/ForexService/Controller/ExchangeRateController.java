@@ -81,6 +81,18 @@ public class ExchangeRateController {
 		return responseEntity;
 	}
 	
+	
+	  @GetMapping("/exchange-rate/{fromCurrency}/{toCurrency}")
+	    public ResponseEntity<Double> getExchangeRateByCurrency(@PathVariable("fromCurrency") String fromCurrency,
+	                                                            @PathVariable("toCurrency") String toCurrency) {
+	        Double exchangeRate = exchangeRateService.getExchangeRateByCurrency(fromCurrency, toCurrency);
+	        
+	        if (exchangeRate != null) {
+	            return ResponseEntity.ok(exchangeRate);
+	        } else {
+	            return ResponseEntity.notFound().build();
+	        }
+	    }
 
 
 }
