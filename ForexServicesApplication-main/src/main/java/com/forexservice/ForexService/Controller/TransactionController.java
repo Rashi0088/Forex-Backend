@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.forexservice.ForexService.Dto.TransactionDto;
 import com.forexservice.ForexService.Entity.Transaction;
+import com.forexservice.ForexService.Repository.TransactionRepository;
 import com.forexservice.ForexService.Service.TransactionService;
 
 //@CrossOrigin(origins = "http://localhost:3000/")
@@ -21,6 +21,11 @@ import com.forexservice.ForexService.Service.TransactionService;
 public class TransactionController {
 	@Autowired
 	private TransactionService transactionService;
+	
+
+	@Autowired
+	private TransactionRepository transactionRepository;
+		
 	
 	
 	
@@ -43,6 +48,16 @@ public class TransactionController {
 		List<Transaction> list = transactionService.getAllTransactions();
 		return list;
 	}
+	
+	@GetMapping("/transaction/sender/{senderName}")
+    public ResponseEntity<List<Transaction>> fetchTransactionsBySender(@PathVariable("senderName") String senderName) {
+        List<Transaction> transactions = transactionRepository.findBySenderName(senderName);
+        if (transactions.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(transactions, HttpStatus.OK);
+    }
+
 	
 
 }
